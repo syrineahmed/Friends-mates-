@@ -1,26 +1,39 @@
 #include <stdio.h>
+#include <string.h>
 #include"election.h"
 
 int main()
-{
-    election E= (12865013,12/15/2022,"Tunis","Ariana",1500,25,"Ariana");
-    int x=ajouter("election.txt", E);
+{   
+    election e1= {1,1,1999,1,9000,90,9,"tunis","ariana","municipale"};
+    election e2= {1,1,1888,2,8000,80,8,"tunis","ariana","municipale"},e3;
+    election e4= {1,1,1777,4,7000,70,7,"tunis","ariana","municipales"};
     
-    if(x==1)
-        printf("\najout de point avec succés");
+    int X=ajouter("ELECTION.txt", e1);
+    int Y=ajouter("ELECTION.txt", e2);
+    int Z=ajouter("ELECTION.txt", e4);
+    if (X==1)
+        printf("\najout de election avec succés");
     else printf("\nechec ajout");
-        /*
-    x=modifier("election.txt",1, identifiant , Date , Types 					   	d'élèctions,Ville,Gouvernorat,Population,Conseillères);
+    
+    if(Y==1)
+        printf("\najout de election avec succés");
+    else printf("\nechec ajout");
 
-    if(x==1)
-        printf("\nModification de point avec succés");
+    if(Z==1)
+        printf("\najout de election avec succés");
+    else printf("\nechec ajout");
+    
+
+    X=modifier("ELECTION.txt",4,e2 );
+    if(X==1)
+        printf("\nModification de election avec succés");
     else printf("\nechec Modification");
-    x=supprimer("point.txt",1 );
-    if(x==1)
-        printf("\nSuppression de point avec succés");
+    X=supprimer("ELECTION.txt",4 );
+    if(X==1)
+        printf("\nSuppression de election avec succés");
     else printf("\nechec Suppression");
-    E =chercher("election.txt",3 );
-    if(E.identifiant==-1)
-        printf("introuvable");*/
+    e3=chercher("ELECTION.txt",1 );
+    if(e3.identifiant==-1)
+        printf("introuvable");
     return 0;
 }
