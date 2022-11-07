@@ -5,7 +5,7 @@ int ajouter(char * filename, election E )
     FILE * f=fopen(filename, "a");
     if(f!=NULL)
     {
-        fprintf(f,"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'élèctions,E.Ville,E.Gouvernorat,E.population,E.conseillères);
+        fprintf(f,"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'elections,E.Ville,E.Gouvernorat,E.population,E.conseilleres);
         fclose(f);
         return 1;
     }
@@ -19,14 +19,14 @@ int modifier( char * filename, int id, election nouv )
     FILE * f2=fopen("nouv.txt", "w");
     if(f!=NULL && f2!=NULL)
     {
-        while(fscanf(f,"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'élèctions,E.Ville,E.Gouvernorat,E.population,E.conseillères)!=EOF)
+        while(fscanf(f,"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'elections,E.Ville,E.Gouvernorat,E.population,E.conseilleres)!=EOF)
         {
             if(E.identifiant == identifiant)
             {
-                fprintf(f2,"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'élèctions,E.Ville,E.Gouvernorat,E.population,E.conseillères);
+                fprintf(f2,"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'elections,E.Ville,E.Gouvernorat,E.population,E.conseilleres);
                 tr=1;
             }
-            else"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'élèctions,E.Ville,E.Gouvernorat,E.population,E.conseillères);
+            else"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'elections,E.Ville,E.Gouvernorat,E.population,E.conseilleres);
 
         }
     }
@@ -45,12 +45,12 @@ int supprimer(char * filename, int identifiant)
     FILE * f2=fopen("nouv.txt", "w");
     if(f!=NULL && f2!=NULL)
     {
-        while(fscanf(f,"%d %d %s %s %s %d %d \n",&E.identifiant, &E.Date,E.Types d'élèctions,E.Ville,E.Gouvernorat,&E.population,&E.conseillères)!=EOF)
+        while(fscanf(f,"%d %d %s %s %s %d %d \n",&E.identifiant, &E.Date,E.Types d'elections,E.Ville,E.Gouvernorat,&E.population,&E.conseilleres)!=EOF)
         {
             if(E.identifiant== identifiant)
                 tr=1;
             else
-                fprintf(f2,"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'élèctions,E.Ville,E.Gouvernorat,E.population,E.conseillères);
+                fprintf(f2,"%d %d %s %s %s %d %d \n",E.identifiant, E.Date,E.Types d'elections,E.Ville,E.Gouvernorat,E.population,E.conseilleres);
         }
     }
     fclose(f);
@@ -66,7 +66,7 @@ election chercher(char * filename, int identifiant)
     FILE * f=fopen(filename, "r");
     if(f!=NULL)
     {
-        while(tr==0&& fscanf(f,"%d %s %s %d %s %s  %d\n",&E.identifiant, &E.Date,E.Types d'élèctions,E.Ville,E.Gouvernorat,&E.population,&E.conseillères)!=EOF)
+        while(tr==0&& fscanf(f,"%d %s %s %d %s %s  %d\n",&E.identifiant, &E.Date,E.Types d'elections,E.Ville,E.Gouvernorat,&E.population,&E.conseilleres)!=EOF)
         {
             if(E.identifiant== identifiant)
                 tr=1;
@@ -76,4 +76,3 @@ election chercher(char * filename, int identifiant)
     if(tr==0)
         E.identifiant=-1;
     return E;
-
