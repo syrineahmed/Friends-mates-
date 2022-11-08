@@ -1,6 +1,6 @@
 #include "obsevateur.h"
 #include<stdio.h>
-int ajouter(observateur O, char filename [])
+int ajouter(observateur O, char *filename )
 {
     FILE * f=fopen(filename, "a");
     if(f!=NULL)
@@ -50,7 +50,7 @@ else
     {
 while(fscanf(f,"%d %d %d %d %s  %s %s %s %s",&O.Id,&O.DN.jour,&O.DN.mois,&O.DN.annee,O.Nom,O.Prenom,O.Nationalite,O.Profession,O.Genre)!=EOF)
 {
-if(O.id!=Id)
+if(O.Id!=Id)
         fprintf(f2,"%d %d %d %d %s  %s %s %s %s\n",O.Id,O.DN.jour,O.DN.mois,O.DN.annee,O.Nom,O.Prenom,O.Nationalite,O.Profession,O.Genre);
 
 }
