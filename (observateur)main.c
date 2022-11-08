@@ -6,11 +6,11 @@ int main()
 {
     obsevateur O1= {1111111,15,5,1970,"MOHSEN","GHORBEL","NON ETRANGER","TECHNICIEN","HOMME"},O2= {1111112,15,5,1970,"SOUMAYA","OUNI","NON ETRANGER","TECHNICIENNE","FEMME"},O3;
     int x=ajouter( O1,"observateur.txt");
-    /*
+    
     if(x==1)
         printf("\najout de OBSERVATEUR avec succés");
     else printf("\nechec ajout");
-        */
+        
     x=modifier(1,O2,"observateur.txt" );
 
     if(x==1)
