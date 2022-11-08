@@ -1,4 +1,4 @@
-ifndef OBSERVATEUR_H_INCLUDED
+#ifndef OBSERVATEUR_H_INCLUDED
 #define OBSERVATEUR_H_INCLUDED
 #include <stdio.h>
 #include <string.h>
@@ -21,9 +21,9 @@ typedef struct
     
 } observateur;
 
-int ajouter(observateur O, char filename[]);
-int modifier( int Id,observateur nouvO, char *filename);
-int supprimer(int Id, char *filename);
-observateur chercher(int Id, char *filename);
+int ajouter(observateur O, char *OBSERVATEUR);
+int modifier( int Id,observateur nouvO, char *OBSERVATEUR);
+int supprimer(int Id, char *OBSERVATEUR);
+observateur chercher(int Id, char *OBSERVATEUR);
 
-#endif // OBSERVATEUR_H_INCLUDED
+#endif 
