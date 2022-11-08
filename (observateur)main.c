@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include"point.h"
+#include"observateur.h"
 
 int main()
 {
