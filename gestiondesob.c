@@ -33,7 +33,7 @@ else
         fclose(f);
         fclose(f2);
 remove(OBSERVATEUR);
-rename("aux.txt", OBSRVATEUR);
+rename("aux.txt", OBSERVATEUR);
         return 1;
     }
   
