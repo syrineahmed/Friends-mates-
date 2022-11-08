@@ -1,8 +1,8 @@
-#include "obsevateur.h"
+#include "observateur.h"
 #include<stdio.h>
-int ajouter(observateur O, char *filename )
+int ajouter(observateur O, char *"filename.txt" )
 {
-    FILE * f=fopen(filename, "a");
+    FILE * f=fopen("filename.txt", "a");
     if(f!=NULL)
     {
         fprintf(f,"%d %d %d %d %s  %s %s %s       %s\n",O.Id,O.DN.jour,O.DN.mois,O.DN.annee,O.Nom,O.Prenom,O.Nationalite,O.Profession,O.Genre);
@@ -12,7 +12,7 @@ int ajouter(observateur O, char *filename )
     else return 0;
 }
 
-int modifier(int id, observateur nouvO, char * filename)
+int modifier(int id, observateur nouvO, char * "filename.txt")
 {
 observateur O;
     FILE * f=fopen(filename, "r");
@@ -32,8 +32,8 @@ else
 }
         fclose(f);
         fclose(f2);
-remove(filename);
-rename("aux.txt", filename);
+remove(filename.txt);
+rename("aux.txt", filename.txt);
         return 1;
     }
   
@@ -56,16 +56,16 @@ if(O.Id!=Id)
 }
         fclose(f);
         fclose(f2);
-remove(filename);
-rename("aux.txt", filename);
+remove("filename.txt");
+rename("aux.txt", "filename.txt");
         return 1;
     }
 }
 
-observateur chercher(int Id, char * filename)
+observateur chercher(int Id, char * "filename.txt")
 {
 observateur O; int tr=0;
-    FILE * f=fopen(filename, "r");
+    FILE * f=fopen("filename.txt", "r");
  if(f!=NULL )
     {
 while(fscanf(f,"%d %d %d %d %s  %s %s %s %s",&O.Id,&O.DN.jour,&O.DN.mois,&O.DN.annee,O.Nom,O.Prenom,O.Nationalite,O.Profession,O.Genre)!=EOF && tr==0)
