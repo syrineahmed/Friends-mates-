@@ -12,7 +12,7 @@ int ajouter(observateur O, char * OBSERVATEUR )
     else return 0;
 }
 
-int modifier(int id, observateur nouvO, char * OBSERVATEUR)
+int modifier(int Id, observateur nouvO, char * OBSERVATEUR)
 {int tr=0;
 observateur O;
     FILE * f=fopen(OBSERVATEUR, "r");
