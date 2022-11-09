@@ -17,13 +17,13 @@ typedef struct
     char Prenom [20];
     char Nationalite[20] ;
     char Profession[20];
-    char Genre[20]
+    char Genre[20];
     
 } observateur;
 
-int ajouter(observateur O, char *OBSERVATEUR);
-int modifier( int Id,observateur nouvO, char *OBSERVATEUR);
-int supprimer(int Id, char *OBSERVATEUR);
-observateur chercher(int Id, char *OBSERVATEUR);
+int ajouter(observateur O, char * OBSERVATEUR);
+int modifier( int Id,observateur nouvO, char * OBSERVATEUR);
+int supprimer(int Id, char * OBSERVATEUR);
+observateur chercher(int Id, char * OBSERVATEUR);
 
 #endif 
