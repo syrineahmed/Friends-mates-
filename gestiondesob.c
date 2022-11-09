@@ -2,7 +2,7 @@
 #include<stdio.h>
 int ajouter(observateur O, char * OBSERVATEUR )
 {
-    FILE * f=fopen(OBSEVATEUR, "a");
+    FILE * f=fopen(OBSERVATEUR, "a");
     if(f!=NULL)
     {
         fprintf(f,"%d %d %d %d %s  %s %s %s %s\n",O.Id,O.DN.jour,O.DN.mois,O.DN.annee,O.Nom,O.Prenom,O.Nationalite,O.Profession,O.Genre);
