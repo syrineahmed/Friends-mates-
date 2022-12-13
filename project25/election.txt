@@ -1,0 +1,5 @@
+1 mohsen ouni Tunisienne 0 1 11 2003 Societecivile
+2 ouni lamia Tunisienne 1 2 11 1999 Presse
+3 trabelsi ahmed Tunisienne 0 13 11 2022 Societecivile
+5 ghgh lljj Tunisienne 1 13 11 2024 Societecivile
+9 d  Tunisienne 0 13 11 2022 Partipolitique
